@@ -1,0 +1,168 @@
+* {
+    margin : 0;
+    padding:0;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+/*  la balise body est le conteneur principal
+     flexbox dont les enfants s'afficheront sur une colonne
+     flex-direction : column;
+*/     
+/*Body = le corps de la page*/
+body{
+    display : flex;
+    flex-direction:column;
+}
+body > div {
+display: flex;
+justify-content: center;
+}
+
+/*L'entête de la page*/
+body > div > header{
+    display: flex;
+    position : relative;
+    justify-content: space-between;
+    align-items: center;
+    background-image:url(image-entete.jpg);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+    border: 1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 50px;
+}
+.titre{
+    font-size: 50px;
+    font-family:'Nova Square', sans-serif;
+    margin: 0;
+    text-shadow: 5px 5px 9px black;
+}
+.titre:hover{
+    color: coral;
+}
+/*
+opérateur de sélection « > » permet de sélectionner
+ l'enfant direct de la balise qui précède le «>»
+ La différence entre « > » et « » c'est que plus grand permet de sélectionner
+ l'enfant direct et « » permet de sélectionner l'enfant l'arrière petite enfant et ainsi de suite.
+
+ Le « > » est plus spécifique que l'aopérateur « »
+*/
+
+/*
+ C'est toujours le dernier élément de la suite qui est sélectionné. 
+ Et c'est sur cet élément qu'on applique la règle de style
+*/
+
+body > div > section,
+body > div > footer,
+body > div > header {
+    flex: 0 1 1100px;
+    background-color: rgba(0,0,0,.1); /* filtre de transparence */
+}
+
+body > div > section {
+    padding-top : 50px;
+    min-height : 100vh;
+}
+#accueil{
+    display: flex;
+}
+#inscription{
+    display: flex;
+}
+
+#piedpage{
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#barre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+fieldset{
+    display: flex;
+}
+legend{
+    background-color: black;
+    color:white;
+    font-size: 20px;
+}
+pre{
+    display: flex;
+    background-color: whitesmoke;
+    border: none;
+}
+#pied{
+    justify-content: space-around;
+}
+#logo2{
+    display: flex;
+    height: 75px;
+    width: 75px;
+}
+
+#mediasociaux{
+    display: flex;
+    flex-direction: row;
+}
+.icone{
+    margin-right: 10px;
+    height: 48px;
+    width: 48px;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#communaute a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+    color: black;
+}
+#compagnie a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+    color: black;
+}
+#communaute a:hover, #compagnie a:hover{
+    color: coral;
+}
+/* Entete */
+body>div:nth-of-type(1){
+    background-color: beige;
+    position : sticky;
+    top : 0;
+}
+body>div:nth-of-type(2){
+    background-color: rgb(236, 236, 175);
+}
+body>div:nth-of-type(3){
+    background-color: rgb(171, 216, 205);
+}
+body>div:nth-of-type(4){
+    background-color: rgb(153, 154, 128);
+}
+body>div:nth-of-type(5){
+    background-color:white;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/formulaire.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="entete">
+        <header>
+            <!-- 
+                Pour crééer rapidement un logo
+                https://www.canva.com/templates/?query=logo  
+            -->
+            <img class="logo" src="Image/Logo/ov.png" alt="ov">
+            <h1 class="titre">Motiv-tru</h1>
+            <!-- https://svgbox.net/ -->
+            <!--
+                id peut être utilisée une seule fois dans le document
+                La même classe  peut être utiliser plusieurs fois 
+            -->
+            <input type="checkbox" id="chk_burger">
+            <label id="burger" for="chk_burger">
+                <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-2" width="32" height="32">
+                <img src="https://s2.svgbox.net/octicons.svg?ic=x-bold" width="32" height="32">
+            </label>
+            <nav class="navigation">
+                <a href="#accueil">Accueil</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#horaireinscription">Inscription & Horaire</a>
+                <a href="#inscription">Inscription</a>
+                <a href="#medias">Médias</a>
+                <a href="#contacts">Contacts</a> 
+            </nav>
+        </header> 
+    </div> <!-- fin .entete -->
+   <div id="accueil">
+    <section >
+        <h2>Accueil</h2>
+    </section>
+   </div> <!-- fin #accueil -->
+   <div id="horaire">
+    <section>
+        <h2>Horaire</h2>
+    </section>
+   </div> <!-- fin #horaire -->
+<div id="inscription">
+  
+      
+   
+    <section>  <h2>Inscription</h2>
+        <!-- https://www.w3schools.com/html/html_forms.asp -->
+         <form action="" class="formulaire">
+            <label class="form__nom" for="">Nom<input type="text"></label>
+            <label class="form__prenom" for="">Prénom<input type="text"></label>
+           <fieldset class="langage">
+            <legend>Langage</legend>
+            <label for="chk__html">HTML<input id="chk__html" type="checkbox"  id=""></label>
+            <label for="">CSS<input type="checkbox"  id=""></label>
+            <label for="">JS<input type="checkbox"  id=""></label>
+            <label for="">PHP<input type="checkbox"  id=""></label>
+            <label for="">MySQL<input type="checkbox"  id=""></label>
+            <label for="">Wordpress<input type="checkbox"  id=""></label>
+        </fieldset>
+        <fieldset>
+            <!-- Pour les radio bouton on créé un groupe en utilisant
+                 la même valeur pour l'attribut name  -->
+            <legend>Age</legend>
+            <label for="rad__1">11-15</label>
+            <input type="radio" name="age" id="rad__1">
+            <label for="rad__2">16-20</label>
+            <input type="radio" name="age" id="rad__2">
+            <label for="rad__3">21-25</label>
+            <input type="radio" name="age" id="rad__3">
+        </fieldset>
+        </form>
+    </section>
+   </div> <!-- fin #inscription -->
+    <footer id="pied">
+        <div id="piedpage"> <!--Pied de page -->
+            <div id="barre">
+                <div id="stat">
+                    <section>
+                    <figure>
+                        <img src="Image/stat.png" alt="Statistique">
+                    </figure>
+                    </section>
+                </div>
+                <div id="note">
+                    <section>
+                    <figure>
+                        <img src="Image/etoile.png" alt="Étoile">
+                    </figure>
+                    </section>
+                </div>
+                <div id="commentaire">
+                    <fieldset>
+                        <legend>Commentaires:</legend>
+                    <div>
+                        <pre>
+        Lorem Ipsum has been the industry's standard 
+        dummy text ever since the 1500s, when an unknown 
+        printer took a galley of type and scrambled it to 
+        make a type specimen book.
+                        </pre>
+                    </div>
+                </fieldset>
+            </div>
+            </div>
+        <section class="logo">
+            <img id="ov" src="Image/ov.png" alt="ov">
+        </section>
+        <section id="sociaux">
+            <h2>Médias sociaux</h2>
+            <div id="mediasociaux">
+            <figure ><img class="icone" src="Image/instagram.png" alt="intagram"></figure>
+            <figure ><img class="icone" src="Image/facebook.png" alt="facebook"></figure>
+            <figure ><img class="icone" src="Image/whatsapp.png" alt="whatsapp"></figure>
+            <figure ><img class="icone" src="Image/twitter.png" alt="twitter"></figure>
+            </div>
+        </section>
+        <section id="communaute">
+            <h2>Communauté</h2>
+            <a href="#blog">Blog</a>
+            <a href="#notrecommunaute">Communauté</a>
+            <a href="#nosidees">Idées</a>
+            <a href="#nosprojets">Projets</a>
+        </section>
+        <section id="compagnie">
+            <h2>Compagnie</h2>
+            <a href="#apropos">A propos</a>
+            <a href="#equipe">Notre équipe</a>
+            <a href="#adresses">Adresses</a>
+            <a href="#medias">Nos médias</a>
+            <a href="#partenaires">Nos partenaires</a>
+            <a href="#contact">Contact</a>
+        </section>
+    </footer>
+   </div> <!-- fin #piedpage -->
+</body>
+</html>
