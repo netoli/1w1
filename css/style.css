@@ -25,13 +25,35 @@ display: flex;
 justify-content: center;
 }
 
+body > div > section,
+body > div > footer,
+body > div > header {
+    flex: 0 1 1100px;
+    background-color: rgba(0,0,0,.1); /* filtre de transparence */
+}
+
+body > div > section {
+    padding-top : 50px;
+    min-height : 100vh;
+}
+
 /*L'entête de la page*/
+body>div:nth-of-type(1){
+    background-image: url(../Images/Background/Entete/Entête.jpg);
+    position : sticky;
+    top : 0;
+    border-radius: 10px;
+}
 body > div > header{
     display: flex;
     position : relative;
     justify-content: space-between;
     align-items: center;
-    background-image:url(image-entete.jpg);
+}
+#entete{
+background-position: center;
+background-size: cover;
+z-index: 1;
 }
 .logo{
     display: flex;
@@ -43,14 +65,425 @@ body > div > header{
     border-radius: 50px;
 }
 .titre{
-    font-size: 50px;
+    font-size: 75px;
     font-family:'Nova Square', sans-serif;
     margin: 0;
-    text-shadow: 5px 5px 9px black;
+    text-shadow: 5px 5px 9px white;
 }
 .titre:hover{
-    color: coral;
+    color: crimson;
 }
+
+/*Accueil*/
+body>div:nth-of-type(2){
+    background-image: url(../Images/Background/Accueil/Accueil.png);
+    border-radius: 5px;
+
+}
+#accueil a{
+    font-size: max(30px, 3vw);
+    color: crimson;
+}
+#accueil a:hover{
+    color: white;
+    filter: blur(1px);
+}
+#accueil h2{
+    text-align: center;
+    color: white;
+    font-size: max(60px, 4vw);
+    padding-bottom: 50px;
+    text-shadow: 5px 5px 9px black;
+}
+#accueil ul{
+    color: white;
+    font-size: max(30px, 3vw);
+    font-weight: bold;
+    text-align: center;
+}
+li{
+    list-style-type: none;
+}
+/*Examen final
+#examenfinal{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.250),rgba(255, 166, 0, 0.250), transparent), url(../Images/Examenfinal/arriere-brique-rouge.png);
+}   
+#sect1{
+    display: flex;
+    flex-direction: column;
+ background-image: linear-gradient(90deg, rgba(255,0,0,.5), rgba(0,255,0,.5));
+}
+    font-size: clamp(1rem, -0.875rem + 8.333333vw, 3.5rem);
+    color: firebrick;
+    font-family: 'Permanent Marker', cursive;
+    padding-bottom: 30px;
+}
+.article__section img:nth-of-type(1){
+    transform: rotate(10deg);
+    border-radius: 10px;
+    flex-direction: row-reverse;
+}
+#sect2 img{
+    transform: rotate(-10deg);
+    border-radius: 10px;
+}
+#sect3 img{
+    transform: rotate(10deg);
+    border-radius: 10px;
+}
+#sect4 img{
+    transform: rotate(-10deg);
+    border-radius: 10px;
+}
+#sect5 img{
+    transform: rotate(10deg);
+    border-radius: 10px;
+}
+#sect6 img{
+    transform: rotate(-10deg);
+    border-radius: 10px;
+}
+#sect7 img{
+    transform: rotate(10deg);
+    border-radius: 10px;
+}
+#sect8 img{
+    transform: rotate(-10deg);
+    border-radius: 10px;
+}
+#sect9 img{
+    transform: rotate(10deg);
+    border-radius: 10px;
+}
+#sect10 img{
+    transform: rotate(-10deg);
+    border-radius: 10px;
+}
+.article__figcaption, .article__paragraphe{
+    font-family: 'Pacifico', cursive;
+    color: firebrick;
+    font-size: clamp(1rem, -0.875rem + 8.333333vw, 2rem);
+}
+*/
+/*Inscription*/
+body>div:nth-of-type(3){
+    background-image: url(../Images/Background/Inscription/Inscription.jpg);
+    border-radius: 5px;
+}
+
+#inscription h2{
+text-align: center;
+color: white;
+font-size: max(60px, 4vw);
+padding-bottom: 50px;
+text-shadow: 5px 5px 9px black;
+}
+
+/*Horaire*/
+body>div:nth-of-type(4){
+    background-image: url(../Images/Background/Horaire/Horaire.jpg);
+    border-radius: 5px;
+}
+
+#horaire h2{
+    font-size: max(60px, 4vw);
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+    text-shadow: 5px 5px 9px black;
+}
+#horaire ul{
+    font-size: max(20px, 1.5vw);
+    list-style-type: none;
+}
+#semainecours{
+    display: flex;
+    box-shadow: 5px 5px 9px black;
+}
+tr{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+}
+#tr1{
+    flex-direction: column;
+}
+.th1, .th2, .th3, .th4, .th5, .th6{
+background-color: rgba(255, 228, 196, 0.300);
+font-size: 20px;
+}
+th{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 9px black;
+}
+td{
+    font-style: italic;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+}
+#semainecours pre{
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(95, 158, 160, 0.400);
+    border-radius: 10px;
+    color: white;
+}
+.mardi, .jeudi{
+    font-family: 'Shantell Sans', cursive;
+}
+.td1, .td2, .td3, .td4, .td5, .td6, .td7, .td8{
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: max(20px, 1.5vw);
+}
+
+/*Article*/
+body>div:nth-of-type(5){
+    background-image: url(../Images/Background/Article/Article.png);
+    border-radius: 5px;
+}
+#articles{
+    flex-direction: row;
+}
+#articles h2{
+    font-size: max(60px, 4vw);
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+    text-shadow: 5px 5px 9px black; 
+}
+#articles img{
+    width: clamp(300px, 50vw, 600px);
+    padding: 50px; 
+}
+#articles section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+p{
+    color: white;
+    text-shadow: 5px 5px 9px black;
+    font-size: max(18px, 1.5vw);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/*Galerie de médias*/
+body>div:nth-of-type(6){
+    background-image: url(../Images/Background/Galerie/galerie.png);
+}
+
+#galeriemedias{
+    flex-direction: column;   
+}
+#galeriemedias h2{
+    display: flex;
+    font-size: max(60px, 4vw);
+    color: white;
+    justify-content: space-around;
+    text-shadow: 5px 5px 9px black;
+}
+#galeriemedias section{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 1100px;
+    
+}
+.mesimages{
+    justify-content: space-between;
+}
+.image {
+    position:relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    transition: .9s;
+  }
+.image:hover{
+    height: 500px;
+}
+.image .description h3{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+.image .description h3 span{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+.image .boiteimage {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.image .boiteimage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: 10s;
+    border-radius: 25px;
+}
+.image:hover .boiteimage img{
+    opacity: 1;
+}
+.image:hover .description{
+    opacity: 1;
+}
+.image:before{
+content: '';
+position: absolute;
+top: -2px;
+left: 0px;
+right: 0px;
+bottom: -2px;
+z-index: 0;
+}
+.image:after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: -1;
+    filter: blur(30px);  
+}
+.image:before, .image:after{
+    background: linear-gradient(225deg, #89ff00, #010615, #00bcd4);
+    border-radius: 25px;
+}
+.image:nth-child(2):before,.image:nth-child(2):after{
+    background: linear-gradient(225deg, #ff005e, #010615, #fbff00);
+    border-radius: 25px;
+}
+.image:nth-child(3):before,.image:nth-child(3):after{
+    background: linear-gradient(225deg, #dd6300, #010615, #2196f3);
+    border-radius: 25px;
+}
+.image:nth-child(4):before,.image:nth-child(4):after{
+    background: linear-gradient(225deg, #E75A7C, #010615, #7AE7C7);
+    border-radius: 25px;
+}
+.image .description {
+    display: flex;
+    height: 120px;
+    padding: 5px;
+    font-size: 20px;
+    background: rgba(0,0,0,.1);
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+    border-radius: 25px;
+  }
+.mavideo{
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .video{
+    margin: 20px;
+    width: 480px;
+  }
+.video video{
+    width: 100%;
+    height: auto;
+}
+
+/*Pied de page*/
+
+#piedpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url(../Images/Background/Entete/Entête.jpg);
+}
+#piedpage h2{
+    font-size: 45px;
+}
+#sectionbarre{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    background-color: white;
+    align-items: center;
+}
+.barre legend{
+    background-color: crimson;
+    font-size: 25px;
+    border-radius: 5px;
+}
+.barre figure{
+    filter: blur(1px);
+}
+#stat{
+    height: 180px;
+    width: 480px;
+}
+hr{
+    margin-bottom: 20px;
+}
+#sectionpied{
+    display: flex;
+    justify-content: space-around;
+}
+#ov{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+    border: 1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 50px;
+}
+.sociaux{
+    display: flex;
+    flex-direction: column;
+}
+
+#mediasociaux{
+    display: flex;
+}
+#mediasociaux figure{
+    margin-right: 15px;
+    cursor: pointer;
+}
+#mediasociaux img{
+    height: 32px;
+    width: 32px;
+    filter: blur(1px);
+}
+#mediasociaux img:hover{
+    filter:contrast(150%);
+}
+.communaute{
+    display: flex;
+    flex-direction: column;
+}
+.compagnie{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    margin: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+#piedpage a:hover{
+    color: crimson;
+}
+
 /*
 opérateur de sélection « > » permet de sélectionner
  l'enfant direct de la balise qui précède le «>»
@@ -65,104 +498,5 @@ opérateur de sélection « > » permet de sélectionner
  Et c'est sur cet élément qu'on applique la règle de style
 */
 
-body > div > section,
-body > div > footer,
-body > div > header {
-    flex: 0 1 1100px;
-    background-color: rgba(0,0,0,.1); /* filtre de transparence */
-}
-
-body > div > section {
-    padding-top : 50px;
-    min-height : 100vh;
-}
-#accueil{
-    display: flex;
-}
-#inscription{
-    display: flex;
-}
-
-#piedpage{
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-#barre{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-fieldset{
-    display: flex;
-}
-legend{
-    background-color: black;
-    color:white;
-    font-size: 20px;
-}
-pre{
-    display: flex;
-    background-color: whitesmoke;
-    border: none;
-}
-#pied{
-    justify-content: space-around;
-}
-#logo2{
-    display: flex;
-    height: 75px;
-    width: 75px;
-}
-
-#mediasociaux{
-    display: flex;
-    flex-direction: row;
-}
-.icone{
-    margin-right: 10px;
-    height: 48px;
-    width: 48px;
-}
-h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 24px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-#communaute a{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-    color: black;
-}
-#compagnie a{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-    color: black;
-}
-#communaute a:hover, #compagnie a:hover{
-    color: coral;
-}
 /* Entete */
-body>div:nth-of-type(1){
-    background-color: beige;
-    position : sticky;
-    top : 0;
-}
-body>div:nth-of-type(2){
-    background-color: rgb(236, 236, 175);
-}
-body>div:nth-of-type(3){
-    background-color: rgb(171, 216, 205);
-}
-body>div:nth-of-type(4){
-    background-color: rgb(153, 154, 128);
-}
-body>div:nth-of-type(5){
-    background-color:white;
-}
+

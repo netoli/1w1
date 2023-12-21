@@ -24,7 +24,8 @@
 #burger img {
     position : absolute;
     top:0;
-    right:0;  
+    right:0; 
+    z-index: 100;
 }
 #burger img:nth-of-type(1){
     display: block;
@@ -38,7 +39,7 @@
     font-size: 18px;
 }
 .navigation a:hover{
-    color: coral;
+    color: white;
 }
 /* pour rendre la case à cocher invisible */
 #chk_burger {
